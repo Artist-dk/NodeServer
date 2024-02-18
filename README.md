@@ -1,9 +1,12 @@
 # NodeServer
 
 ### Prerequisites
-
+- [HTML]
+- [CSS]
+- [JavaScript]
 - [Node.js](https://nodejs.org/)
 - [MySQL](https://www.mysql.com/)
+- [express.js]
 
 ### Installation
 

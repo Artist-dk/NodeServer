@@ -1,7 +1,9 @@
-const express = require('express');
+const express = require('express')
 const mysql = require('mysql')
 const cors = require('cors')
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser')
+const path = require('path')
+
 
 
 const app = express()
@@ -21,10 +23,24 @@ app.get('/app1', (req, res) => {
 
 app.post('/app2', (req, res) => {
   let data = req.body;
-  console.log(req.body)
-  console.log(JSON.stringify(req.body))
-  res.send('Data Received: ' + JSON.stringify(data));
+  // data = req.body;
+  data = JSON.stringify(req.body);
+  res.send('Data Received: ' + data);
 })
+
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname, './index.html'))
+})
+
+
+
+
+
+
+
+
+
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
